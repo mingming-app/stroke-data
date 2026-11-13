@@ -2,6 +2,8 @@
 
 `strokes.js` holds the stroke data the app uses to draw and check Chinese characters: for each character in the word list (simplified and traditional forms), the stroke outlines (`strokes`) and their centre lines (`medians`). It defines one global, `DATA`, so the app can load it with a plain `<script>` tag.
 
+A public copy of this folder is at https://github.com/mingming-app/stroke-data (folder `chinese/`).
+
 ## Source
 
 - **Make Me a Hanzi** by Shaunak Kishore: https://github.com/skishore/makemeahanzi
