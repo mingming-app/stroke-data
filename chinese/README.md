@@ -1,4 +1,4 @@
-# Chinese stroke data
+# Chinese stroke and parts data
 
 `strokes.js` holds the stroke data the app uses to draw and check Chinese characters: for each character in the word list (simplified and traditional forms), the stroke outlines (`strokes`) and their centre lines (`medians`). It defines one global, `DATA`, so the app can load it with a plain `<script>` tag.
 
@@ -24,3 +24,26 @@ Changed from hanzi-writer-data 2.0.1, first in November 2026:
 - The per-character JSON files are combined into one JavaScript file.
 
 The stroke shapes themselves are not changed. `tools/build-strokes.js` in the app's repository rebuilds the file from the package, so the change can be repeated exactly.
+
+# Parts data
+
+`parts.js` says how each character breaks down into its parts, one level at a time, for the app's Parts first choice and its parts animation. It defines two globals: `PARTS` (for each character: its parts, which part each stroke belongs to, and a short note on where the character comes from) and `PART_INFO` (for each part: its meaning and pinyin, and for a side form such as 亻, the full character it stands for).
+
+## Source
+
+- **Make Me a Hanzi**'s `dictionary.txt`, commit bddc96d4: https://github.com/skishore/makemeahanzi
+  It is derived from the Unihan database (copyright 1991-2009 Unicode, Inc.) and CJKlib. The Unicode notice is at the top of `LGPL.txt`.
+
+## Licence
+
+GNU Lesser General Public License, version 3 or later: `LGPL.txt` (which starts with the Unicode notice). The LGPL builds on the GNU General Public License, in `GPL.txt`.
+
+## Changes
+
+Changed from `dictionary.txt`, first in November 2026:
+
+- Only the characters in the app's word list, and the parts they break into, are kept.
+- Only the decomposition, the stroke-to-part matches, the first pinyin, the meaning (cut to its first sense) and the etymology are kept, in a shorter form.
+- Side forms are marked with the full character they stand for, and each part is marked as learnable (it has stroke data) and as common (in the 3,500 common characters of the Table of General Standard Chinese Characters).
+
+`tools/build-parts.js` in the app's repository rebuilds the file, so the change can be repeated exactly.
