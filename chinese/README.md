@@ -27,7 +27,7 @@ The stroke shapes themselves are not changed. `tools/build-strokes.js` in the ap
 
 # Parts data
 
-`parts.js` says how each character breaks down into its parts, one level at a time, for the app's Parts first choice and its parts animation. It defines two globals: `PARTS` (for each character: its parts, which part each stroke belongs to, and a short note on where the character comes from) and `PART_INFO` (for each part: its meaning and pinyin, and for a side form such as 亻, the full character it stands for).
+`parts.js` says how each character breaks down into its parts, one level at a time, for the app's Parts first choice and its parts animation. It defines two globals: `PARTS` (for each character: its parts, which part each stroke belongs to, and for a sound-meaning character, which part gives the meaning and which the sound) and `PART_INFO` (for each part: its meaning and pinyin, and for a side form such as 亻, the full character it stands for).
 
 ## Source
 
@@ -43,7 +43,7 @@ GNU Lesser General Public License, version 3 or later: `LGPL.txt` (which starts 
 Changed from `dictionary.txt`, first in November 2026:
 
 - Only the characters in the app's word list, and the parts they break into, are kept.
-- Only the decomposition, the stroke-to-part matches, the first pinyin, the meaning (cut to its first sense) and the etymology are kept, in a shorter form.
+- Only the decomposition, the stroke-to-part matches, the first pinyin, the meaning (cut to its first sense) and, for sound-meaning characters, which part gives the meaning and which the sound, are kept, in a shorter form. The etymology hints are left out.
 - Side forms are marked with the full character they stand for, and each part is marked as learnable (it has stroke data) and as common (in the 3,500 common characters of the Table of General Standard Chinese Characters).
 
 `tools/build-parts.js` in the app's repository rebuilds the file, so the change can be repeated exactly.
