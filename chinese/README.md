@@ -47,3 +47,25 @@ Changed from `dictionary.txt`, first in November 2026:
 - Side forms are marked with the full character they stand for, and each part is marked as learnable (it has stroke data) and as common (in the 3,500 common characters of the Table of General Standard Chinese Characters).
 
 `tools/build-parts.js` in the app's repository rebuilds the file, so the change can be repeated exactly.
+
+# Pronunciation recordings: audio/ and audio.js
+
+`audio/` holds a recording for each word and learnable part the app teaches, as 64 kbit/s MP3 files; `audio.js` defines `AUDIO`, which maps each word's or part's characters (simplified and traditional) to its file name.
+
+## Sources
+
+- **audio-cmn** by Hugo Lopez et al. (PLIDAM, INALCO): https://github.com/hugolpz/audio-cmn, 64k files. Licence: Creative Commons Attribution-ShareAlike (CC BY-SA), as audio-cmn states for both sets (https://creativecommons.org/licenses/by-sa/4.0/; the version of the original pack's licence is still to be confirmed from its readme, http://packs.shtooka.net/cmn-caen-tan/readme.txt, offline on 20 Nov 2026).
+  - HSK words and characters read by **Yue Tan** (from the Shtooka project's cmn-caen-tan pack, recorded with Nicolas Vion's software).
+  - Mandarin syllables in each tone ("syllabs v.2") read by **Chen Wang**.
+- **Lingua Libre** (https://lingualibre.org), on Wikimedia Commons: seven words audio-cmn lacks (北京, 不客气, 出租车, 打电话, 下雨, 中国, 哪儿), read by **CanonNi**, files "LL-Q9192 (cmn)-CanonNi-<word>.wav". Licence: CC0 (public domain).
+
+## Changes
+
+Changed from audio-cmn, first in November 2026:
+
+- Only the recordings the app uses are kept, renamed: a word by its characters (朋友.mp3), a syllable by its pinyin and tone number (ai4.mp3).
+- A single character or part plays the syllable of the app's pinyin; a neutral-tone one its character recording.
+
+The Lingua Libre recordings are converted from WAV to the same MP3 format, with the silence at the start trimmed (the end kept whole, so soft endings aren't cut) and the loudness evened out.
+
+`tools/build-audio.js` in the app's repository rebuilds the files, so the change can be repeated exactly.

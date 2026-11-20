@@ -1,0 +1,12 @@
+Pronunciation recordings (audio/ and audio.js)
+
+Recordings from audio-cmn (https://github.com/hugolpz/audio-cmn) by Hugo Lopez et al.: HSK words and
+characters read by Yue Tan (the Shtooka project's cmn-caen-tan pack) and Mandarin syllables read by Chen Wang.
+Licensed under Creative Commons Attribution-ShareAlike (CC BY-SA); this changed set is shared under the same licence.
+Full licence: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+Seven words (北京, 不客气, 出租车, 打电话, 下雨, 中国, 哪儿) come from Lingua Libre (https://lingualibre.org) on
+Wikimedia Commons, read by CanonNi, released under CC0 (public domain):
+https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+What was changed, and when: see README.md, "Pronunciation recordings".
