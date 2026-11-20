@@ -64,7 +64,7 @@ Changed from `dictionary.txt`, first in November 2026:
 Changed from audio-cmn, first in November 2026:
 
 - Only the recordings the app uses are kept, renamed: a word by its characters (朋友.mp3), a syllable by its pinyin and tone number (ai4.mp3).
-- A single character or part plays the syllable of the app's pinyin; a neutral-tone one its character recording.
+- A single character or part read its usual way (the first reading pypinyin lists) plays its character recording by Yue Tan; one read another way, or with no character recording (most parts), plays the syllable of the app's pinyin; a neutral-tone one its character recording. (Changed 20 November 2026: before, every single character played its syllable.)
 
 The Lingua Libre recordings are converted from WAV to the same MP3 format, with the silence at the start trimmed (the end kept whole, so soft endings aren't cut) and the loudness evened out.
 
